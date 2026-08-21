@@ -1,10 +1,8 @@
-#include "../include/autograd/engine.hpp"
-#include <unordered_set>
-#include <set>
+#pragma once
 
-
-
-
+#include <memory>
+#include <vector>
+#include "../../include/autograd/node.hpp"
 
 
 void gradient_descent(std::vector<std::shared_ptr<Node>>& parameters, float learning_rate){

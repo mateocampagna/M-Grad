@@ -1,6 +1,8 @@
-#include "include/autograd/engine.hpp"
+#include "../include/autograd/engine.hpp" // Importa todo el sistema matemático de un golpe
+#include "../include/optimizer/optimizer.hpp"   // Importa el optimizador
+
 #include <iostream>
-#include <vector>
+#include <vector>ector>
 
 int main() {
   auto x = std::make_shared<Node>(2.0);       // input
