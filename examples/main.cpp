@@ -2,7 +2,7 @@
 #include "../include/optimizer/optimizer.hpp"   // Importa el optimizador
 
 #include <iostream>
-#include <vector>ector>
+#include <vector>
 
 int main() {
   auto x = std::make_shared<Node>(2.0);       // input
@@ -15,7 +15,7 @@ int main() {
   std::cout << "Starting training... initial weight W = " << w->value << std::endl;
 
   // Training loop
-  for (int epoch = 0; epoch < 1000; epoch++) {
+  for (int epoch = 0; epoch < 400; epoch++) {
     
     // FORWARD PASS
     auto pred = x * w;

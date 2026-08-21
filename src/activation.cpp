@@ -1,5 +1,3 @@
-#pragma once
-
 #include <memory>
 #include "../include/autograd/node.hpp"
 
