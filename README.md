@@ -17,7 +17,3 @@ The main goal is to learn how frameworks such as PyTorch implement the fundament
 🚧 **Work in progress**
 
 This project is primarily intended for educational purposes and experimentation.
-
-## License
-
-MIT
