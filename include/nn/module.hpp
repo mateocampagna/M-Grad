@@ -5,7 +5,7 @@
 
 class Module{
 public: 
-    virtual ~Module();
+    virtual ~Module() = default;
 
     virtual std::vector<std::shared_ptr<Node>> parameters() const = 0;
 };

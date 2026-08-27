@@ -7,14 +7,14 @@
 #include <random>
 #include <memory>
 
-class Neuron : public Module {
+class Neuron:public Module{
 private:
-    std::vector<std::shared_ptr<Node>> w;
-    std::shared_ptr<Node> b;
-
+    std::vector<std::shared_ptr<Node>> weight;
+    std::shared_ptr<Node> bias;
+    bool nonlin; 
 public:
     // const
-    Neuron(int nin);
+    Neuron(int nin, bool nonlin = true);
 
     // forward pass
     std::shared_ptr<Node> operator()(const std::vector<std::shared_ptr<Node>>& x);
