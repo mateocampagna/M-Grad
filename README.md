@@ -1,4 +1,4 @@
-# Autograd Engine
+# M-Grad
 
 A small **educational automatic differentiation engine** written in modern C++. The project is focused on understanding the core concepts behind computational graphs, reverse-mode automatic differentiation, and neural network training from a low-level perspective.
 
