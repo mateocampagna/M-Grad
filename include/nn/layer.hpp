@@ -9,7 +9,7 @@ private:
   std::vector<Neuron> neurons; 
 
 public:
-  Layer(int nin, int nout);
+  Layer(int nin, int nout, bool nonlin = true);
 
   // Forward Pass
   std::vector<std::shared_ptr<Node>> operator()(const std::vector<std::shared_ptr<Node>>& x);

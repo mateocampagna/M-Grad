@@ -22,7 +22,7 @@ std::shared_ptr<Node> Neuron::operator()(const std::vector<std::shared_ptr<Node>
     out = out + x[i] * weight[i];
   }
 
-  return relu(out);
+  return nonlin ? relu(out) : out;
 }
 
 
