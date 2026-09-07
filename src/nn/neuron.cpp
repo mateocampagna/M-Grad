@@ -15,7 +15,7 @@ Neuron::Neuron(int nin, bool nonlin) : nonlin(nonlin){
 }
 
 std::shared_ptr<Node> Neuron::operator()(const std::vector<std::shared_ptr<Node>> &x){
-  if(x.size() != weight.size()) throw std::invalid_argument("la dimension de los pesos debe ser la misma que la del input");
+  if(x.size() != weight.size()) throw std::invalid_argument("weight dimension must match input dimension");
   
   auto out = bias;
   for(size_t i=0; i<x.size(); i++){
