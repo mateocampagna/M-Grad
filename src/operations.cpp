@@ -199,8 +199,8 @@ std::shared_ptr<Node> operator/(float a, std::shared_ptr<Node> b){
 }
 
 
-//------------------------- OPERATORPOW 
-std::shared_ptr<Node> operatorpow(std::shared_ptr<Node> a, std::shared_ptr<Node> b){
+//------------------------- POW 
+std::shared_ptr<Node> pow(std::shared_ptr<Node> a, std::shared_ptr<Node> b){
   float value = std::pow(a->value, b->value);
   std::vector<std::shared_ptr<Node>> fathers = {a, b};
   
@@ -214,7 +214,7 @@ std::shared_ptr<Node> operatorpow(std::shared_ptr<Node> a, std::shared_ptr<Node>
   return c;
 }
 
-std::shared_ptr<Node> operatorpow(std::shared_ptr<Node> a, float b){
+std::shared_ptr<Node> pow(std::shared_ptr<Node> a, float b){
   float value = std::pow(a->value, b);
   std::vector<std::shared_ptr<Node>> fathers = {a};
   
@@ -227,7 +227,7 @@ std::shared_ptr<Node> operatorpow(std::shared_ptr<Node> a, float b){
   return c;
 }
 
-std::shared_ptr<Node> operatorpow(float a, std::shared_ptr<Node> b){
+std::shared_ptr<Node> pow(float a, std::shared_ptr<Node> b){
   float value = std::pow(a, b->value);
   std::vector<std::shared_ptr<Node>> fathers = {b};
   
@@ -240,8 +240,8 @@ std::shared_ptr<Node> operatorpow(float a, std::shared_ptr<Node> b){
   return c;
 }
 
-//------------------------- OPERATOREXP
-std::shared_ptr<Node> operatorexp(std::shared_ptr<Node> a){
+//------------------------- EXP
+std::shared_ptr<Node> exp(std::shared_ptr<Node> a){
   float value = std::exp(a->value);
   std::vector<std::shared_ptr<Node>> fathers = {a};
   
@@ -254,8 +254,8 @@ std::shared_ptr<Node> operatorexp(std::shared_ptr<Node> a){
   return c;
 }
 
-//------------------------- OPERATORLOG
-std::shared_ptr<Node> operatorlog(std::shared_ptr<Node> a){
+//------------------------- LOG
+std::shared_ptr<Node> log(std::shared_ptr<Node> a){
   float value = std::log(a->value);
   std::vector<std::shared_ptr<Node>> fathers = {a};
   
