@@ -18,25 +18,26 @@ Node::Node(float v, std::vector<std::shared_ptr<Node>> f, char p):
   _backward([](){})
 {}
 
+
+// void Node::backward(){
+//   std::vector<Node*> topo;
+//   std::set<Node*> visited;
+
+//   std::function<void(Node*)> build_topo = [&](Node* v){
+//     if(visited.find(v) == visited.end()){
+//       visited.insert(v);
+//       for (auto ch : v->fathers) build_topo(ch.get());
+//       topo.push_back(v);
+//     }
+//   };
+
+//   build_topo(this);
+//   this->gradient = 1.0f;
+//   for (auto it=topo.rbegin(); it!=topo.rend(); ++it)
+//       (*it)->_backward();
+// }
+
 void Node::backward(){
-  std::vector<Node*> topo;
-  std::set<Node*> visited;
-
-  std::function<void(Node*)> build_topo = [&](Node* v){
-    if(visited.find(v) == visited.end()){
-      visited.insert(v);
-      for (auto ch : v->fathers) build_topo(ch.get());
-      topo.push_back(v);
-    }
-  };
-
-  build_topo(this);
-  this->gradient = 1.0f;
-  for (auto it=topo.rbegin(); it!=topo.rend(); ++it)
-      (*it)->_backward();
-}
-
-void Node::backward_opt(){
   std::vector<Node*> topo;
   std::unordered_set<Node*> visited;
 

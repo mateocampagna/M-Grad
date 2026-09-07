@@ -10,7 +10,6 @@ The main goal is to learn how frameworks such as PyTorch implement the fundament
 * Implement reverse-mode autodiff from scratch.
 * Explore graph traversal and gradient propagation.
 * Practice modern C++ concepts such as smart pointers, templates, and STL containers.
-* Understand the fundamentals behind neural network optimization.
 
 ## Status
 

@@ -4,8 +4,7 @@
 
 MLP::MLP(int nin, const std::vector<int>& layer_sizes){
     std::vector<int> input_sizes = {nin};
-    input_sizes.push_back(nin);
-    input_sizes.insert(input_sizes.end(), layer_sizes.begin(), layer_sizes.end());
+        input_sizes.insert(input_sizes.end(), layer_sizes.begin(), layer_sizes.end());
 
     for(size_t i=0; i<input_sizes.size()-1; i++){
         bool last_layer = (i == input_sizes.size()-2);
